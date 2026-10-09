@@ -3,7 +3,7 @@
 1. Open a new terminal and navigate to the frontend directory:
 
    ```bash
-   cd fronend
+   cd iss-tracker-fronend
    ```
 
 2. Install dependencies:
