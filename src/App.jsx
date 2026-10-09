@@ -27,9 +27,9 @@ function App() {
 
     fetchISSData();
 
-    // const intervalId = setInterval(fetchISSData, 10000);
+    const intervalId = setInterval(fetchISSData, 10000);
 
-    // return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId);
   }, [])
 
   const handleInputChange = (e) => {
