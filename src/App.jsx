@@ -95,15 +95,17 @@ function App() {
         <div className='p-5'>
           <h2 className='font-medium text-3xl mb-5'>International Space Station</h2>
           <h4 className='text-xl font-semibold'>Current postion</h4>
-          <p>Latitude: {currentPos?.latitude}</p>
-          <p>Longitude: {currentPos?.longitude}</p>
-          <p>Speed: {speed?.toFixed(2)} km/h</p>
-          <p>
-            Last updated:{" "}
-            {new Date(currentPos?.timestamp).toLocaleString()}
-          </p>
-
+          <div className='grid grid-cols-2'>
+            <p>Latitude: {currentPos?.latitude}</p>
+            <p>Speed: {speed?.toFixed(2)} km/h</p>
+            <p>Longitude: {currentPos?.longitude}</p>
+            <p>
+              Last updated:{" "}
+              {new Date(currentPos?.timestamp).toLocaleString()}
+            </p>
+          </div>
           <div className='my-4 bg-blue-100 rounded-4xl p-5'>
+            <h6 className='mb-5 font-medium'>Find the distance and closest distance recorded to ISS</h6>
             <form onSubmit={handleSubmitOfForm} className='space-y-6'>
               <div className='flex items-center'>
                 <label className='font-semibold' htmlFor="latitude">Latitude </label>
